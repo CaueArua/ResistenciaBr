@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link href="css/cf5f226b2c66.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+	<div th:include="layout :: head"></div>
+
+	<div class="content-wrapper">
+
+		<div class="container-fluid">
+			<!-- Breadcrumbs-->
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="content-container-primary character-list">
+						<ul class="list-group media-list media-list-stream m-t-0">
+							<li class="list-group-item p-a"><span class="header-text">
+								<h3 class="m-a-0">Novos Personagens (<span id="charCount"></span>)</h3>
+							</span></li>
+							<li class="media list-group-item p-a collection-char-list">
+								<div class="row" id="chars">
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+					
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="content-container-primary character-list">
+						<ul class="list-group media-list media-list-stream m-t-0">
+							<li class="list-group-item p-a"><span class="header-text">
+								<h3 class="m-a-0">Novas naves ( <span id="shipsCount"></span> )</h3>
+							</span></li>
+							<li class="media list-group-item p-a collection-char-list">
+								<div class="row" id="ships">
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+					
+		</div>
+		<div th:include="layout :: foot"></div>
+	</div>
+</body>
+
+
+<script src="js/comuns/charactes.js"></script>
+<script src="js/pages/units/list.js"></script>
+
+
+</html>
