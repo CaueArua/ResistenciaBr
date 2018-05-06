@@ -54,7 +54,7 @@ function createNewChar(json){
 	
 	function createParentDiv(carDiv){
 		var iDiv = document.createElement('div');
-		iDiv.className = 'col-xs-6 col-sm-3 col-md-3 col-lg-2';
+		iDiv.className = 'col-xs-6 col-sm-6 col-md-4 col-lg-3';
 		iDiv.appendChild(carDiv);		
 		return iDiv;
 	}

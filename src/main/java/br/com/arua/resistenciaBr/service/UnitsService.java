@@ -8,5 +8,7 @@ public interface UnitsService {
 
 	public List<UnitsModel> getNewUnits();
 	public List<UnitsModel> getUnits();
+	public UnitsModel getNewUnit(String baseId);
+	public void save(UnitsModel unit);
 
 }

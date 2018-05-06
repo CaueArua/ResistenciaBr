@@ -14,6 +14,7 @@ function loadChars(response){
 	var size = 0;
 	
 	response.forEach(function(unit){
+		unit.href="/units/register/" + unit.baseId;
 		var div = createNewChar(unit);
 		document.getElementById('chars').appendChild(div);
 		size++;

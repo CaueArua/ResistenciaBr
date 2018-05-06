@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="/css/swgoh.css" rel="stylesheet">
+	
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+	<div th:include="layout :: head"></div>
+	
+	<div class="content-wrapper">
+	
+		<div class="container-fluid">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/units">Novas Unidades</a></li>
+				<li class="breadcrumb-item active">Cadastrar</li>
+			</ol>
+
+
+			<!-- Breadcrumbs-->
+			<div class="row">
+				<div class="col-12">				
+
+					<div class="card mb-3">
+						<div class="card-header">
+							<i class="fa fa-users"></i> Cadastrar Unidade
+						</div>
+						
+						<div class="card-body">
+							<form action="/units/save" method="post">
+								<div class="hidden">
+									<input type="text" 		name="baseId" 		th:value="${unit.baseId}">
+									<input type="number" 	name="pk" 			th:value="${unit.pk}">
+									<input type="text" 		name="name" 		th:value="${unit.name}">
+									<input type="number" 	name="maxPower" 	th:value="${unit.maxPower}">
+									<input type="text" 		name="url" 			th:value="${unit.url}">
+									<input type="text" 		name="image" 		th:value="${unit.image}">
+									<input type="text" 		name="description" 	th:value="${unit.description}">
+									<input type="text" 		name="combatType" 	th:value="${unit.combatType}">
+									<input type="text" 		name="side" 		th:value="${unit.side}" 	
+										id="hidden_side">
+								
+								</div>
+							
+								<div class="row">
+									<div class="col-md-2 col-xs-12 col-sm-12 mb-3">
+										<div class="collection-char card">
+											<div class="char-portrait">
+												<a class="char-portrait-link">
+													<div class="char-portrait-image">
+														<img th:src="${unit.image}" class="char-portrait-img">
+													</div>
+												</a>
+											</div>
+											<div class="collection-char-name">
+												<span th:text="${unit.name}" class="collection-char-name-link" />
+											</div>
+											<br>
+										</div>
+									</div>
+	
+									<div class="col-md-10 col-xs-12 col-sm-12 mb-3">
+									
+										<div class="card mb-3">	
+											
+											<div class="modal-header">
+												<h4>Informações Faltando</h4>
+											</div>
+										
+											<div class="col-md-12 col-md-offset-0">
+												<div class="row">
+													<div class="col-md-12 col-md-offset-0  mb-3">
+													</div>
+													
+													<div class="col-md-4 col-md-offset-0  mb-3">
+														<div>
+															<label class="control-label">Nome - Pt-br </label>
+														</div>
+														<div class="input-group">
+															<input type="text" class="form-control" name="namePtBr" th:value="${unit.namePtBr}">
+														</div>
+													</div>
+													
+													
+													<div class="col-md-2 col-md-offset-0  mb-3">
+														<div>
+															<label class="control-label">Lado Da Froça </label>
+														</div>
+														<input type="checkbox" checked data-toggle="toggle" id="side"
+															data-on="Lado Bom" 
+															data-off="Lado Negro" 
+															data-offstyle="danger"
+															onchange="changeSide()">													
+														</div>
+													
+													
+													<div class="col-md-6 col-md-offset-0  mb-3">
+														<div>
+															<label class="control-label">Descrição </label>
+														</div>
+														<div class="input-group">
+															<input type="text" class="form-control" name="descriptionPtBr" th:value="${unit.descriptionPtBr}">
+														</div>
+													</div>
+													
+													
+												</div>
+											</div>
+											
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default btn-large" onclick="location.href = '/units'">
+													<span class="fa fa-ban"></span>
+													Cancelar
+												</button>
+												<button type="submit" class="btn btn-default btn-large">
+													<span class="fa fa-save"></span>
+													Salvar
+												</button>
+											</div>
+											
+											
+											
+										</div>
+										
+										
+																			
+									</div>
+								</div>	
+							</form>
+						</div>
+						
+						<div class="card-footer small">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+					
+		</div>
+		<div th:include="layout :: foot"></div>
+	</div>
+</body>
+
+
+<script src="/js/comuns/charactes.js"></script>
+<script src="/js/pages/units/register.js"></script>
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+	
+
+</html>
